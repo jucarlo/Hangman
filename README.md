@@ -23,3 +23,6 @@ Hangman is a word-guessing game where one player thinks of a hidden word and dra
 + Vowels first: Players often start by guessing common vowels (A, E, I, O, U) to find letters for the blanks. 
 + Keep track of guesses: Cross out guessed letters on the alphabet to avoid repeating them and to help narrow down the possibilities. 
 + Rare letters: Be mindful of rare letters like J and Z, as they can be tricky to place in a word. 
+
+### License
+This project is licensed with the [MIT license](LICENSE).
