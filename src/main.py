@@ -1,5 +1,7 @@
 import random
 
+#TODO[JC]: Put the ASCII stages in a separate class
+
 # Hangman ASCII stages
 stages = [
     r'''
@@ -62,7 +64,17 @@ stages = [
 ]
 
 # Word list
-word_list = ["water", "dog", "camel"]
+word_list=[]
+try:
+    with open("../assets/word_list.txt", "r") as file:
+        lines = file.readlines()
+        for line in lines:
+            if line.strip() not in word_list:
+                word_list.append(line.strip())
+except FileNotFoundError:
+    print("Error: The file 'word_list.txt' was not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
 # Pick a random word
 chosen_word = random.choice(word_list)
